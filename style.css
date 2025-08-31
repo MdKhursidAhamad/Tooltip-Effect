@@ -1,0 +1,88 @@
+html,
+body {
+    width: 100%;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+    flex-direction: column;
+   
+}
+.h2{
+    font-size: 4.5vmin;
+    font-style: italic;
+    margin-bottom: 60px;
+    letter-spacing: 0.4px;
+    font-weight: 600;
+}
+.wrapper-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.wrapper-icon .icon-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    margin: auto;
+}
+.span-icon{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9b9a9a;
+    border-radius: 50%;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.3);
+    margin-top: 5px;
+}
+.span-icon:hover{
+    background-color: rgb(128, 240, 128);
+    color: rgb(255, 255, 255);
+}
+.wrapper-icon .icon-card .tooltip{
+    background-color: #07a840;  
+    color: aliceblue;
+    font-size: 18px;
+    white-space: nowrap;
+    padding: 7px 15px;
+    border-radius: 5px;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    top: -43px;
+    transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.wrapper-icon .icon-card:hover .tooltip{
+    opacity: 1;
+    pointer-events: auto;
+}
+.icon {
+    width: 23px;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+}
+.wrapper-icon .icon-card .tooltip::before{
+    position: absolute;
+    content: '';
+    height: 10px;
+    width: 10px;
+    background-color: #09a71b;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
